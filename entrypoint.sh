@@ -16,11 +16,10 @@ DOMAINS=(${DOMAINS})
 CERTBOT_DOMAINS=("${DOMAINS[*]/#/--domain }")
 
 mkdir /var/www
-mkdir /var/www/letsencrypt
 
 certbot certonly --webroot --agree-tos --noninteractive --text --expand \
       --email ${EMAIL} \
-      --webroot-path /var/www/letsencrypt \
+      --webroot-path /usr/share/nginx/html \
       ${CERTBOT_DOMAINS} && \
 certbot renew --dry-run &
 nginx -g "daemon off;"
