@@ -15,8 +15,6 @@ fi
 DOMAINS=(${DOMAINS})
 CERTBOT_DOMAINS=("${DOMAINS[*]/#/--domain }")
 
-mkdir /var/www
-
 certbot certonly --webroot --agree-tos --noninteractive --text --expand \
       --email ${EMAIL} \
       --webroot-path /usr/share/nginx/html \
