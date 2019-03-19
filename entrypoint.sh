@@ -15,6 +15,9 @@ fi
 DOMAINS=(${DOMAINS})
 CERTBOT_DOMAINS=("${DOMAINS[*]/#/--domain }")
 
+mkdir /var/wwww
+mkdir /var/wwww/letsencrypt
+
 certbot certonly --webroot --agree-tos --noninteractive --text --expand \
       --email ${EMAIL} \
       --webroot-path /var/www/letsencrypt \
