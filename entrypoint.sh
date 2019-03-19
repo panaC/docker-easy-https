@@ -23,5 +23,4 @@ certbot certonly --webroot --agree-tos --noninteractive --text --expand \
       --webroot-path /var/www/letsencrypt \
       ${CERTBOT_DOMAINS} && \
 certbot renew --dry-run &
-
 nginx -g "daemon off"
