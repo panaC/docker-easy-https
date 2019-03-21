@@ -11,3 +11,4 @@ get auto https cert with certbot and nginx http redirect to https
 - https://medium.com/@pentacent/nginx-and-lets-encrypt-with-docker-in-less-than-5-minutes-b4b8a60d3a71
 - https://gist.github.com/rkaramandi/b9d693dd9ad941d5d346701f08368bba
 - https://blog.confirm.ch/sending-signals-docker-container/
+
